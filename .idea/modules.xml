@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ApiGateWay/ApiGateWay.iml" filepath="$PROJECT_DIR$/ApiGateWay/ApiGateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RecapMicro.iml" filepath="$PROJECT_DIR$/.idea/RecapMicro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RenACarApiRental/RenACarApiRental.iml" filepath="$PROJECT_DIR$/RenACarApiRental/RenACarApiRental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentACarApiInvoice/RentACarApiInvoice.iml" filepath="$PROJECT_DIR$/RentACarApiInvoice/RentACarApiInvoice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentACarApiUser/RentACarApiUser.iml" filepath="$PROJECT_DIR$/RentACarApiUser/RentACarApiUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentACarDiscoveryService/RentACarDiscoveryService.iml" filepath="$PROJECT_DIR$/RentACarDiscoveryService/RentACarDiscoveryService.iml" />
+    </modules>
+  </component>
+</project>

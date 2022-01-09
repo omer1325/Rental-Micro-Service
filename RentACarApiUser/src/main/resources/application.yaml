@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: user-ws
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:userdb
+    username: sa
+    password: 12345
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  port: ${PORT:0}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+gateway:
+  ip: "localhost"
+login:
+  url:
+    path: "/users/login"
+token:
+  expiration: 864000000
+  secret: mysupersecretkeymysupersecretkeymysupersecretkey

@@ -1,0 +1,49 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+      - id: users-add
+        uri: lb://user-ws
+        predicates:
+        - Path=/user-ws/api/**
+        - Method=POST
+        filters:
+        - RewritePath=/user-ws/(?<segment>.*), /$\{segment}
+
+      - id: users-ws-login
+        uri: lb://user-ws
+        predicates:
+        - Path=/user-ws/users/login
+        - Method=POST
+        filters:
+        - RewritePath=/user-ws/(?<segment>.*), /$\{segment}
+
+      - id: users-ws-get-update-delete
+        uri: lb://user-ws
+        predicates:
+        - Path=/user-ws/api/**
+        - Method=GET,PUT,DELETE
+        - Header=Authorization, Bearer (.*)
+        filters:
+        - RewritePath=/user-ws/(?<segment>.*), /$\{segment}
+        - AuthorizationHeaderFilter
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+token:
+  secret: mysupersecretkeymysupersecretkeymysupersecretkey
+
+

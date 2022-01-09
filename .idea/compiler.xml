@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="RenACarApiRental" />
+        <module name="RentACarDiscoveryService" />
+        <module name="RentACarApiInvoice" />
+        <module name="ApiGateWay" />
+        <module name="RentACarApiUser" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ApiGateWay" target="11" />
+      <module name="RenACarApiRental" target="11" />
+      <module name="RentACarApiInvoice" target="11" />
+      <module name="RentACarApiUser" target="11" />
+      <module name="RentACarDiscoveryService" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateWay" options="-parameters" />
+      <module name="RenACarApiRental" options="-parameters" />
+      <module name="RentACarApiInvoice" options="-parameters" />
+      <module name="RentACarApiUser" options="-parameters" />
+      <module name="RentACarDiscoveryService" options="-parameters" />
+    </option>
+  </component>
+</project>
